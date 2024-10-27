@@ -1,0 +1,10 @@
+ 6 does nothing
+ 7 Same as init
+ 8 = 2.718
+ 10 does nothing
+ 11 Same
+ 12 137
+ 14 new Gpoint(99.9, 44.4)
+ 15 Same
+ 16 137
+ 17 99.9

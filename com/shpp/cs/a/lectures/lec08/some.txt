@@ -1,0 +1,31 @@
+package com.shpp.cs.a.lectures.lec08;
+
+import com.shpp.cs.a.console.TextProgram;
+
+public class QuestionableJava extends TextProgram {
+    public void run() {
+        int marten = 137;
+        int faye = 42;
+
+        println("marten = " + marten);
+        hannelore(faye); m137
+        println("marten = " + marten); m137
+        println("faye = " + faye); f42
+
+        marten = angus(faye, marten + faye); m7
+        println("marten = " + marten); m7
+        marten = angus(marten, faye); 5
+        println("marten = " + marten); 5
+    }
+
+    private void hannelore(int marten) {
+        println("marten = " + marten);
+        marten = 160;
+    }
+
+    private int angus(int martin, int faye) {
+        int dora = faye - martin; 137 35
+        println("dora = " + dora); d137
+        return dora % 10; 7 5
+    }
+}
