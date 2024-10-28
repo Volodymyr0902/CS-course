@@ -22,5 +22,6 @@ public class Calc1Tests {
         System.out.println();
         Assignment10Part1.main(new String[]{"12--a*3^b-50+c/4 a=7 b = 5 -c = -3.72"});
         System.out.println();
+        Assignment10Part1.main(new String[]{"-3.45*-a+b/12 a = 4 b = 146"});
     }
 }
