@@ -8,7 +8,7 @@ import java.util.HashMap;
  * File: Assignment10Part1.java.
  * Simple calculator program which receives a math expression and (optionally)
  * its variables' values, solves it and prints the result if input data is correct:
- * contains only digits and supported operators ("+" "-" "/" "*" "^").
+ * contains only digits and supported operators ("+", "-", "/", "*", "^").
  * Digits, variables and their names may be negative.
  * If program is executed via terminal "*" must be screened with "\".
  * Specifications are in materials of level #10, Task "Simple calculator".
