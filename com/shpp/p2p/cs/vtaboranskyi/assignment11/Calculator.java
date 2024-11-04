@@ -3,19 +3,20 @@ package com.shpp.p2p.cs.vtaboranskyi.assignment11;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * This class is the set of methods for calculating math expression received as a string preformatted by
+ * FormulaAssembler (with no variables, spaced, double minuses or input mistakes).
+ */
 public class Calculator {
 
     /**
-     * Preparation:
-     * inserts variables' value in the expression if such exist,
-     * removes double minuses, checks division by 0,
-     * separates operands and operators from the formula,
-     * Checks if input operators are supported.
-     * Then executes math operations in a strict order:
-     * raising to power, multiplication and division,
-     * adding and subtraction, until only one operand remains.
+     * Step by step, checks if given formula contains specific operation and executes it if so.
+     * Starts from calculating expressions in brackets, then counts functions, until the formula
+     * only consists of numbers and simple math operators.
+     * Creates two respective lists of operands and operators, checks operators are supported and executes
+     * math operations considering either math priorities or operators sequence in the given formula.
      *
-     * @param formula The expression separated from possible variables definitions.
+     * @param formula The expression preformatted by FormulaAssembler.
      * @return The solution of the formula.
      */
     protected static double calculate(String formula) throws ValidationException {

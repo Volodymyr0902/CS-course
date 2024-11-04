@@ -2,8 +2,30 @@ package com.shpp.p2p.cs.vtaboranskyi.assignment11;
 
 import java.util.HashMap;
 
+/**
+ * This class is the set of methods for preformatting user input data so that calculator
+ * can properly parse it and give the correct result.
+ */
 public class FormulaAssembler {
 
+    /**
+     * The only method in this class accessible from the outside.
+     * Checks if input isn't empty and formats it:
+     * - joins to string,
+     * - removes spaces,
+     * - separately retrieves the formula and the variables definitions,
+     * - checks if all the variables have their values,
+     * - inserts these, if such exist,
+     * - removes double minuses in case some operands have unary minus,
+     * - checks division by 0.
+     * Now the formula is preformatted for calculation.
+     *
+     * @param args The math expression with possible variables definitions.
+     * @return The preformatted expression.
+     * @throws ValidationException This is thrown if no specific data was input,
+     *                             some variables doesn't have defined value or
+     *                             the expression contains division by 0.
+     */
     protected static String assemble(String[] args) throws ValidationException {
         checkNoData(args);
 
@@ -25,6 +47,12 @@ public class FormulaAssembler {
         return formula;
     }
 
+    /**
+     * Checks if input is empty or null.
+     *
+     * @param args The math expression with possible variables definitions.
+     * @throws ValidationException This is thrown if input is empty or null.
+     */
     private static void checkNoData(String[] args) throws ValidationException {
         if (args == null || args.length == 0 || args.length == 1 && (args[0] == null || args[0].isEmpty()))
             throw new ValidationException("No data found!");
@@ -42,7 +70,6 @@ public class FormulaAssembler {
         for (int i = 0; i < formula.length(); i++)
             if (isCharVar(formula, i))
                 varsInFormula.append(formula.charAt(i));
-
 
         // In case the formula contains variables positive and negative matches are checked.
         if (!varsInFormula.isEmpty())
@@ -204,6 +231,13 @@ public class FormulaAssembler {
         }
     }
 
+    /**
+     * Checks if specific symbol is meant to be a variable.
+     *
+     * @param formula The expression separated from possible variables definitions.
+     * @param index The index of the symbol to be checked in the formula.
+     * @return True if the symbol is a letter and doesn't have a letter or a number left and right to it.
+     */
     protected static boolean isCharVar(String formula, int index) {
         boolean noLetterNumberBefore = index == 0 ||
                 !Character.isDigit(formula.charAt(index - 1)) && !Character.isLetter(formula.charAt(index - 1));

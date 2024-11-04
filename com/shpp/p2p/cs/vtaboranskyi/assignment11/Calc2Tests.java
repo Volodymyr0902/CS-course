@@ -53,6 +53,14 @@ public class Calc2Tests {
         Assignment11Part1.main(new String[]{expression});
         System.out.println();
 
+        expression = "log2(1)+sin(16)*55";
+        Assignment11Part1.main(new String[]{expression});
+        System.out.println();
+
+        expression = "sqrt954 * (18^tan40 / sin250 * log10(120))";
+        Assignment11Part1.main(new String[]{expression});
+        System.out.println();
+
         //-----------------------------------------------//
 
         Assignment11Part1.main(new String[]{"14^2+18-a*ca = 4c=8"});
