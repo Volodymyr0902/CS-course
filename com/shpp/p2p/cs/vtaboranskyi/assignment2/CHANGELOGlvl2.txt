@@ -1,0 +1,19 @@
+Problem 1
+1. Added brakes in lines 51, 52 
+2. Added condition check in line 49
+3. Added else{} block in line 60
+4. Added params to methods comments
+
+Problem 3
+1. Shortened the whole class
+2. Used all the consts
+
+Problem 4
+1. Added method getDescent() to GLabel flagName 
+in method typeFlagName()
+
+Problems 2, 4, 5, 6: tabs corrected.
+
+Problems 4, 5, 6 added consts APPLICATION_WIDTH 
+and APPLICATION_HEIGHT.
+
