@@ -71,7 +71,7 @@ public class Calc2Tests {
         System.out.println();
         Assignment11Part1.main(new String[]{"-5^-2 *16/9"});
         System.out.println();
-        Assignment11Part1.main(new String[]{"-13+a - 18^-b * c/5 a = 7 b = 4 c = 22"});
+        Assignment11Part1.main(new String[]{"-13+a - 18^b * c/5 a = 7 b = 4 c = 22"});
         System.out.println();
         Assignment11Part1.main(new String[]{"-5--a a = 3"});
         System.out.println();

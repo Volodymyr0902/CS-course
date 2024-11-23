@@ -1,4 +1,4 @@
-package com.shpp.p2p.cs.vtaboranskyi.assignment13;
+package com.shpp.p2p.cs.vtaboranskyi.assignment13.first;
 
 import acm.graphics.GImage;
 import java.util.ArrayList;

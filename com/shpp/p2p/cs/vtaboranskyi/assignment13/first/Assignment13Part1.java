@@ -1,4 +1,4 @@
-package com.shpp.p2p.cs.vtaboranskyi.assignment13;
+package com.shpp.p2p.cs.vtaboranskyi.assignment13.first;
 
 import acm.util.ErrorException;
 
@@ -12,7 +12,9 @@ import acm.util.ErrorException;
 public class Assignment13Part1 {
     public static void main(String[] args) {
         try {
-            int silhouettes = SilhouettesFinder.findSilhouettes(args);
+            var silhouettesCounter = new SilhouettesCounter(args);
+            // The number of silhouettes found on the current image.
+            int silhouettes = silhouettesCounter.findSilhouettes();
             System.out.println("Found " + silhouettes + " silhouette(s) on the image.");
         } catch (ErrorException e) {
             System.out.println("Failed to read the input file.");

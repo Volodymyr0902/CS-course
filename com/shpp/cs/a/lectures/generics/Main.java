@@ -1,5 +1,6 @@
 package com.shpp.cs.a.lectures.generics;
 
+import java.awt.*;
 import java.util.Arrays;
 
 public class Main {
@@ -17,6 +18,7 @@ public class Main {
         Character[] charArray = {'o', 'f', 'q', '?'};
         String[] strArray = {"Hello", "my", "dear", "friends"};
         printArr(dArray);
+
     }
 
     // Generic method
