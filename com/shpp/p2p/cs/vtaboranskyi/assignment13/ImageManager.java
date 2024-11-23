@@ -16,7 +16,7 @@ public class ImageManager implements SilhouettesConstants {
      * @return Prepared (binarized) pixels matrix.
      */
     public static int[][] prepareImage(String[] args) {
-        String fileName = checkFilename(args);
+        String fileName = getFilename(args);
         return toBinary(toGrayscale(new GImage(fileName).getPixelArray()));
     }
 
@@ -26,7 +26,7 @@ public class ImageManager implements SilhouettesConstants {
      * @param args Other programme's argument(s).
      * @return Filename from CLI if such was input, else the default one.
      */
-    private static String checkFilename(String[] args) { //todo
+    private static String getFilename(String[] args) { //todo filename & return type
         return args != null && args.length != 0 && args[0] != null ? args[0] : DEFAULT_FILENAME;
     }
 
@@ -38,14 +38,14 @@ public class ImageManager implements SilhouettesConstants {
      * @param pixels Image's pixels matrix.
      * @return A pixels matrix with all color components converted to grayscale.
      */
-    private static int[][] toGrayscale(int[][] pixels) { //todo
+    private static int[][] toGrayscale(int[][] pixels) { //todo naming
         for (int row = 0; row < pixels.length; ++row) {
             for (int col = 0; col < pixels[row].length; ++col) {
 
-                if (GImage.getAlpha(pixels[row][col]) <= TRANSPARENCY_MAX_THRESHOLD) {
+                if (GImage.getAlpha(pixels[row][col]) <= TRANSPARENCY_MAX_THRESHOLD) { // todo alpha added
                     pixels[row][col] = GImage.createRGBPixel(MAX_RGB_VALUE, MAX_RGB_VALUE, MAX_RGB_VALUE);
                 } else {
-                    int grayed = getGrayed(row, col, pixels);
+                    int grayed = getGrayed(row, col, pixels); // todo extracted
                     pixels[row][col] = GImage.createRGBPixel(grayed, grayed, grayed);
                 }
             }

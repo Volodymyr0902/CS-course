@@ -1,7 +1,6 @@
 package com.shpp.p2p.cs.vtaboranskyi.assignment13;
 
 import acm.graphics.GImage;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -33,9 +32,9 @@ public class TonesManager implements SilhouettesConstants {
     static int getBackgroundTone(int[][] pixels) {
         // The container for the frame's pixels tones.
         ArrayList<Integer> perimeterTones = new ArrayList<>();
-        parseTopAndBottom(pixels, perimeterTones); // todo
-        parseLeftAndRight(pixels, perimeterTones); // todo
-        return getMostFrequentTone(perimeterTones); // todo
+        parseTopAndBottom(pixels, perimeterTones); // todo extracted
+        parseLeftAndRight(pixels, perimeterTones); // todo extracted
+        return getMostFrequentTone(perimeterTones); // todo extracted
     }
 
     /**

@@ -1,0 +1,41 @@
+Assignment13Part1.java:
+- static method is invoked instead of creating an object
+
+SilhouettesFinder.java:
+- ex SilhouettesCounter.java
+- added areEnoughPxs()
+- lines 36 & 101 - changed conditions
+- used AdjacentPixel instead of arrays in addAdjacentPixels(), now 8 pixels around are checked
+- no more fields, all members are local and passed as parameters
+- all methods are static now
+
+ImageManager.java:
+- getFilename() & toGrayscale() & getTotalPixels() are extracted from ex SilhouettesCounter.java
+- toGrayscale() is ex makeGray()
+- getFilename() is ex checkFilename(); returns string, was boolean
+- toGrayscale() now considers alpha
+- getGrayed() is extracted from toGrayscale()
+- toBinary() is a new one
+
+TonesManager.java:
+- getBackgroundTone() is from ex SilhouettesCounter.java, previously getBackgroundRed()
+- parseLeftAndRight() & parseTopAndBottom() & getMostFrequentTone() are extracted from it
+- isBackgroundInGrayscale() & isNotBackgroundInBinary() are ex isSameTone(), now,
+    when final image is binary the criteria of comparison is background/non-background;
+    before this were red components of current and previous pixels
+- getPixelTone() extracted as common for a few methods
+
+AdjacentPixel.java:
+- this object is used instead of 2 arrays of directions shifts in SilhouettesFinder
+
+SilhouettesConstants.java:
+- old constants names are corrected
+- arrays are removed, new constants added
+
+Common:
+- many comments were changed and adapted to the new structure
+- some methods access modifier is set as package-private on purpose
+
+
+
+

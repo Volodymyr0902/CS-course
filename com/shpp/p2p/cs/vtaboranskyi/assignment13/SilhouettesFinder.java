@@ -24,10 +24,10 @@ public class SilhouettesFinder implements SilhouettesConstants {
      */
     public static int findSilhouettes(String[] args) {
         // All image's pixels in matrix, already binarized.
-        int[][] preparedPixels = ImageManager.prepareImage(args);
+        int[][] preparedPixels = ImageManager.prepareImage(args); // todo ex field
 
         // Pixels' parsing tracking matrix.
-        boolean[][] visitedPixels = new boolean[preparedPixels.length][preparedPixels[0].length];
+        boolean[][] visitedPixels = new boolean[preparedPixels.length][preparedPixels[0].length]; // todo ex field
         int silhouettes = 0;
 
         for (int row = 0; row < preparedPixels.length; row++) {
@@ -68,7 +68,7 @@ public class SilhouettesFinder implements SilhouettesConstants {
      */
     private static int startBFS(int row, int col, int[][] pixels, boolean[][] visitedPixels) {
         // Container for same cluster's pixels to be checked.
-        Queue<int[]> pixelsToVisit = new LinkedList<>();
+        Queue<int[]> pixelsToVisit = new LinkedList<>(); // todo ex field
         pixelsToVisit.offer(new int[]{row, col});
         int pixelsCounter = 0;
 
@@ -92,13 +92,13 @@ public class SilhouettesFinder implements SilhouettesConstants {
     private static int addAdjacentPixels(int row, int col, int pixelsCounter,
                                          int[][] pixels, boolean[][] visitedPixels, Queue<int[]> pixelsToVisit) {
         for (int i = 0; i < ADJACENT_PXS_NUM; i++) {
-            AdjacentPixel adjPixel = new AdjacentPixel(row, col, i);
+            AdjacentPixel adjPixel = new AdjacentPixel(row, col, i); // todo instead of arrays
             int deltaRow = adjPixel.getRow();
             int deltaCol = adjPixel.getCol();
 
             if (adjPixel.isPixelWithinMatrix(pixels)) {
                 if (!visitedPixels[deltaRow][deltaCol] &&
-                        TonesManager.isNotBackgroundInBinary(pixels, deltaRow, deltaCol)) {
+                        TonesManager.isNotBackgroundInBinary(pixels, deltaRow, deltaCol)) { // todo condition
                     visitedPixels[deltaRow][deltaCol] = true;
                     pixelsToVisit.offer(new int[]{deltaRow, deltaCol});
                     pixelsCounter++;

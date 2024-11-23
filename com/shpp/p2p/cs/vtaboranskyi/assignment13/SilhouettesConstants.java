@@ -17,33 +17,33 @@ public interface SilhouettesConstants {
     /**
      * Tone's values diapason indicate affiliation to a similar tone.
      */
-    int TONES_DIFFERENCE_THRESHOLD = 20; // todo
+    int TONES_DIFFERENCE_THRESHOLD = 20; // todo naming
 
     /**
      * The percentage minimal part of total pixels number a pixels
-     * cluster must consist of to be considered a silhouette. //todo
+     * cluster must consist of to be considered a silhouette.
      */
-    double SILHOUETTE_PERCENTAGE_OF_TOTAL_PXS = 0.002;
+    double SILHOUETTE_PERCENTAGE_OF_TOTAL_PXS = 0.002; // todo naming
 
     /**
      * The proportional red component part for a pixel's grayscale.
      */
-    double RED_GRAYSCALE_COEFFICIENT = 0.3; // todo
+    double RED_GRAYSCALE_COEFFICIENT = 0.3; // todo naming
 
     /**
      * The proportional green component part for a pixel's grayscale.
      */
-    double GREEN_GRAYSCALE_COEFFICIENT = 0.6;
+    double GREEN_GRAYSCALE_COEFFICIENT = 0.6; // todo naming
 
     /**
      * The proportional blue component part for a pixel's grayscale.
      */
-    double BLUE_GRAYSCALE_COEFFICIENT = 0.1;
+    double BLUE_GRAYSCALE_COEFFICIENT = 0.1; // todo naming
 
     /**
      * The number of pixels nearby another one which can be checked for similarity.
      */
-    int ADJACENT_PXS_NUM = 8;
+    int ADJACENT_PXS_NUM = 8; // todo 4 -> 8
 
     /**
      * Max pixel's alpha value to treat it as transparent.
