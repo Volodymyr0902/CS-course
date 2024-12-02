@@ -1,12 +1,22 @@
-package com.shpp.p2p.cs.vtaboranskyi.assignment9;
+package com.shpp.p2p.cs.vtaboranskyi.assignment9.tests;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import com.shpp.p2p.cs.vtaboranskyi.assignment9.utilities.MyArrayList;
+import com.shpp.p2p.cs.vtaboranskyi.assignment9.utilities.MyLinkedList;
+import com.shpp.p2p.cs.vtaboranskyi.assignment9.utilities.MyQueue;
+import com.shpp.p2p.cs.vtaboranskyi.assignment9.utilities.MyStack;
+
+import java.util.*;
 
 public class ListsTester {
     public static void main(String[] args) {
+        //test1();
+
+        ArrayList<Integer> arrayList = new ArrayList<>(0);
+        arrayList.add(913);
+        System.out.println(arrayList);
+    }
+
+    private static void test1() {
         MyArrayList<String> myAL = new MyArrayList<>();
         for (int i = 0; i < 24; i++) {
             myAL.add("Hi" + i);
@@ -67,13 +77,13 @@ public class ListsTester {
 
         //--------------------------------//
 
-       //LinkedList
+        //LinkedList
         MyLinkedList<Integer> myLL = new MyLinkedList<>();
         myLL.add(5);
         myLL.add(34);
         myLL.add(11);
         myLL.add(83);
-        myLL.add(1, 64);
+        myLL.set(1, 64);
         System.out.println(myLL.get(1));
         //myLL.clear();
         System.out.println(myLL);
@@ -115,6 +125,5 @@ public class ListsTester {
         System.out.println(myQueue.poll());
         System.out.println(myQueue.peek());
         System.out.println(myQueue);
-
     }
 }

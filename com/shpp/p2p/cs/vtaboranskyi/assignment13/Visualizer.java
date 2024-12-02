@@ -5,7 +5,7 @@ import com.shpp.cs.a.graphics.WindowProgram;
 
 public class Visualizer extends WindowProgram {
     public void run() {
-        GImage img = new GImage(ImageManager.prepareImage(new String[]{"img.png"}));
+        GImage img = new GImage(ImageManager.prepareImage(new String[]{"assets/test12.png"}));
         add(img);
     }
 }

@@ -65,9 +65,9 @@ public class Calc2Tests {
 
         Assignment11Part1.main(new String[]{"14^2+18-a*ca = 4c=8"});
         System.out.println();
-        Assignment11Part1.main(new String[]{"-11^-v/-a + 9/-3 a=-2 -v=-3"});
+        Assignment11Part1.main(new String[]{"-11^-v/-a + 9/-3 a=-2 v=-3"});
         System.out.println();
-        Assignment11Part1.main(new String[]{"-a^b*3 -a=-7 b=2"});
+        Assignment11Part1.main(new String[]{"-a^b*3 a=-7 b=2"});
         System.out.println();
         Assignment11Part1.main(new String[]{"-5^-2 *16/9"});
         System.out.println();
@@ -79,7 +79,7 @@ public class Calc2Tests {
         System.out.println();
         Assignment11Part1.main(new String[]{"836^-15 * 72 - 154/a + c a = - 4 c = 184"});
         System.out.println();
-        Assignment11Part1.main(new String[]{"a/b^-c + d- c/e a = 13 b = 42 c = 128 -d = 7 e = 12.4"});
+        Assignment11Part1.main(new String[]{"a/b^c + d- c/e", "a = 13", "b = 42", "c = 128", "d = 7", "e = 12.4"});
         System.out.println();
         Assignment11Part1.main(new String[]{"12--a*3^b-50+c/4+d a=7 b = 5 -c = -3.72"});
         System.out.println();
